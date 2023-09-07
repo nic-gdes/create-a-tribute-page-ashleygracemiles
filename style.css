@@ -1,0 +1,140 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 8px;
+}
+
+body {
+    background-color: snow;
+    font-family: 'Montserrat', sans-serif;
+}
+
+#hero {
+    background-image: url(/img/kati-hero.jpeg);
+    height: 50vh;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#main {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 3rem;
+    width: 100%;
+    padding: 5rem 5rem 0 5rem;
+}
+
+#title {
+    font-size: 6em;
+    font-weight: 500;
+    color: white;
+}
+
+#about {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 2rem;
+    max-width: 100%;
+    padding-bottom: 10rem;
+}
+
+#about-title {
+    text-align: left;
+    font-size: 6rem;
+    font-weight: 500;
+    line-height: 1;
+}
+
+.content {
+    width: 100%;
+    height: 100%;
+    font-size: 2rem;
+}
+
+.content>a {
+    width: 100%;
+    height: 100%;
+    font-size: 2rem;
+    text-decoration: none;
+}
+
+#img-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    padding-top: 3rem;
+}
+
+#image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#work {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 3rem;
+}
+
+#work-title {
+    text-align: left;
+    font-size: 6rem;
+    font-weight: 500;
+    line-height: 1;
+}
+
+.work-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#footer-main {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 5rem 0;
+}
+
+#footer-img {
+    max-width: 30vw;
+}
+
+@media screen and (min-width: 845px) {
+    #main {
+        padding: 8rem 20rem 0 20rem;
+    }
+
+    #about {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: .25fr 2fr;
+        grid-template-areas:
+            "about-title about-img"
+            "about-content about-img";
+        grid-gap: 0;
+    }
+
+    #about-title {
+        grid-area: about-title;
+        font-size: 8rem;
+        padding-bottom: 0;
+    }
+
+    .content {
+        grid-area: about-content;
+        padding-right: 6rem;
+        padding-top: 3rem;
+    }
+
+    #img-div {
+        grid-area: about-img;
+        padding: 0;
+    }
+}
